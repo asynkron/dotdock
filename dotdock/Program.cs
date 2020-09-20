@@ -12,7 +12,7 @@ namespace dotdock
     {
         public class Options
         {
-            [Option('s', "sln", Required = true, HelpText = "Solution file to be processed.")]
+            [Option('s', "sln", Required = false, HelpText = "Solution file to be processed.")]
             public string SolutionPath { get; set; }
             
             
@@ -50,8 +50,14 @@ COPY --from=build-env /app/out .
 
 ".Replace("'", "\"");
 
-     
-            var slnPath = opts.SolutionPath.Trim();
+            var currentDir = Directory.GetCurrentDirectory();
+            if (opts.SolutionPath == null)
+            {
+                Console.WriteLine($"-s --sln not provided, using current directory {currentDir}");
+            }
+
+            var slnPath = (opts.SolutionPath ?? currentDir).Trim();
+            
             var solutionFiles = Directory.GetFiles(slnPath, "*.sln");
             var solutionFile=SelectOne(solutionFiles, s=>s,"Select Solution file");
             
@@ -61,7 +67,9 @@ COPY --from=build-env /app/out .
 
             using var sln = new Sln(solutionFile, SlnItems.Projects);
 
-            var nugetConfigs = Directory.EnumerateFiles(path, "nuget.config", SearchOption.AllDirectories);
+            var nugetConfigs = Directory.EnumerateFiles(path, "nuget.config", SearchOption.AllDirectories)
+                .Select(p => Path.GetRelativePath(path, p));
+            
             var copyNugetConfigs = DockerCopyItems(nugetConfigs);
             template = template.Replace("%COPYNUGET%", copyNugetConfigs);
 
@@ -93,7 +101,8 @@ COPY --from=build-env /app/out .
 
             var dockerFilePath = Path.Combine(path, "dockerfile");
             File.WriteAllText(dockerFilePath,template);
-            Console.WriteLine(template);
+           
+            Console.WriteLine($"Wrote docker file to '{dockerFilePath}'");
 
 
             //handle options
