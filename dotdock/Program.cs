@@ -28,6 +28,13 @@ namespace dotdock
 
         static void RunOptions(Options opts)
         {
+            //TODO: copy default .dockerignore file to output dir
+            //TODO: allow specifying ports to expose
+            //TODO: allow specifying additional startup args
+            //TODO: allow selecting what base images to use
+            //TODO: filter out projects that are not apps?
+            
+            
             var template = @"
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build-env
 WORKDIR /app
