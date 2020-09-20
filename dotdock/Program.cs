@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using CommandLine;
 using net.r_eg.MvsSln;
+using net.r_eg.MvsSln.Core;
 
 namespace dotdock
 {
@@ -76,15 +77,15 @@ COPY --from=build-env /app/out .
                     .ToList();
             
             var projectFile = SelectOne(projects, p => p.path,"Select project to run");
-            var paths = projects.Select(p => p.path.Replace("\\", "/"));
+            var paths = projects.Select(p => p.ToPath());
             var copyProjects = DockerCopyItems(paths);
 
-            var app = Path.GetFileNameWithoutExtension(projectFile.path).Replace("\\", "/");
+            var app = Path.GetFileNameWithoutExtension(projectFile.ToPath());
             app = Path.GetFileName(app);
             
-            var runRestore = $"RUN dotnet restore \"{projectFile.path.Replace("\\", "/")}\"";
-            var runPublish = $"RUN dotnet publish -c Release -o out \"{projectFile.path.Replace("\\", "/")}\"";
-            var entrypoint = "ENTRYPOINT [\"dotnet\", \"" + app + ".dll\"]";
+            var runRestore = $"RUN dotnet restore \"{projectFile.ToPath()}\"";
+            var runPublish = $"RUN dotnet publish -c Release -o out \"{projectFile.ToPath()}\"";
+            var entrypoint = $"ENTRYPOINT [\"dotnet\", \"{app}.dll\"]";
             
             template = template
                 .Replace("%COPYNUGET%", copyNugetConfigs)
@@ -128,7 +129,7 @@ COPY --from=build-env /app/out .
             while (true)
             {
                 
-                Console.WriteLine(prompt + "> ");
+                Console.Write(prompt + "> ");
                 var res = Console.ReadLine();
                 if (int.TryParse(res!.Trim(), out var index) && index >= 1 && index <= arr.Length )
                 {
@@ -142,5 +143,10 @@ COPY --from=build-env /app/out .
             //handle errors
         }
 
+    }
+
+    public static class Extensions
+    {
+        public static string ToPath(this ProjectItem self) => self.path.Replace("\\", "/");
     }
 }
