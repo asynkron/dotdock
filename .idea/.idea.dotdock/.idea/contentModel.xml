@@ -8,6 +8,7 @@
         <e p="nupkg" t="Include">
           <e p="dotdock.1.0.0.nupkg" t="Include" />
           <e p="dotdock.1.0.1.nupkg" t="Include" />
+          <e p="dotdock.1.0.2.nupkg" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">

@@ -57,55 +57,45 @@ COPY --from=build-env /app/out .
             }
 
             var slnPath = (opts.SolutionPath ?? currentDir).Trim();
-            
             var solutionFiles = Directory.GetFiles(slnPath, "*.sln");
             var solutionFile=SelectOne(solutionFiles, s=>s,"Select Solution file");
-            
-            
             var path = Path.GetDirectoryName(solutionFile);
-            Console.WriteLine(path);
-
             using var sln = new Sln(solutionFile, SlnItems.Projects);
 
-            var nugetConfigs = Directory.EnumerateFiles(path, "nuget.config", SearchOption.AllDirectories)
-                .Select(p => Path.GetRelativePath(path, p));
+            var nugetConfigs = 
+                Directory
+                    .EnumerateFiles(path, "nuget.config", SearchOption.AllDirectories)
+                    .Select(p => Path.GetRelativePath(path, p));
             
             var copyNugetConfigs = DockerCopyItems(nugetConfigs);
-            template = template.Replace("%COPYNUGET%", copyNugetConfigs);
 
             var projects =
                 sln
                     .Result
                     .ProjectItems
                     .ToList();
-
             
             var projectFile = SelectOne(projects, p => p.path,"Select project to run");
-
             var paths = projects.Select(p => p.path.Replace("\\", "/"));
             var copyProjects = DockerCopyItems(paths);
 
-            template = template.Replace("%COPYCSPROJ%", copyProjects);
-
-
-            var runRestore = $"RUN dotnet restore \"{projectFile.path.Replace("\\", "/")}\"";
-            template = template.Replace("%DOTNETRESTORE%", runRestore);
-
-            var runPublish = $"RUN dotnet publish -c Release -o out \"{projectFile.path.Replace("\\", "/")}\"";
-            template = template.Replace("%DOTNETPUBLISH%", runPublish);
-
             var app = Path.GetFileNameWithoutExtension(projectFile.path).Replace("\\", "/");
             app = Path.GetFileName(app);
+            
+            var runRestore = $"RUN dotnet restore \"{projectFile.path.Replace("\\", "/")}\"";
+            var runPublish = $"RUN dotnet publish -c Release -o out \"{projectFile.path.Replace("\\", "/")}\"";
             var entrypoint = "ENTRYPOINT [\"dotnet\", \"" + app + ".dll\"]";
-            template = template.Replace("%ENTRYPOINT%", entrypoint);
-
+            
+            template = template
+                .Replace("%COPYNUGET%", copyNugetConfigs)
+                .Replace("%COPYCSPROJ%", copyProjects)
+                .Replace("%DOTNETRESTORE%", runRestore)
+                .Replace("%DOTNETPUBLISH%", runPublish)
+                .Replace("%ENTRYPOINT%", entrypoint);
+            
             var dockerFilePath = Path.Combine(path, "dockerfile");
             File.WriteAllText(dockerFilePath,template);
-           
             Console.WriteLine($"Wrote docker file to '{dockerFilePath}'");
-
-
-            //handle options
         }
 
         private static string DockerCopyItems(IEnumerable<string> paths)
@@ -122,7 +112,7 @@ COPY --from=build-env /app/out .
         private static T SelectOne<T>(IEnumerable<T> options, Func<T,string> stringer,string prompt = "Select option")
         {
             Console.WriteLine();
-            var arr = options.ToArray();
+            var arr = options.OrderBy(stringer) .ToArray();
             if (arr.Length == 1)
             {
                 var onlyOne = arr.First();

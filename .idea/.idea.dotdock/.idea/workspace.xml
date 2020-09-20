@@ -26,7 +26,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.dotdock/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dotdock/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.dotdock/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dotdock/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dotdock/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/dotdock/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotdock/dotdock.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/dotdock/dotdock.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +34,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Users/rogerjohansson/git/dotdock/dotdock/Program.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -91,7 +93,7 @@
       <option name="presentableId" value="Default" />
       <updated>1600610870658</updated>
       <workItem from="1600610880744" duration="8665000" />
-      <workItem from="1600626241077" duration="1968000" />
+      <workItem from="1600626241077" duration="3501000" />
     </task>
     <task id="LOCAL−00001" summary="first">
       <created>1600626279968</created>
@@ -99,7 +101,13 @@
       <option name="presentableId" value="LOCAL−00001" />
       <updated>1600626279968</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL−00002" summary="fixes">
+      <created>1600631074530</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1600631074530</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,7 +127,8 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="first" />
-    <option name="LAST_COMMIT_MESSAGE" value="first" />
+    <MESSAGE value="fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1750" height="409" key="GridCell.Tab.0.bottom" timestamp="1600616054337">
@@ -202,9 +211,9 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="1750" height="409" key="GridCell.Tab.4.right/0.0.1792.1120@0.0.1792.1120" timestamp="1600616054346" />
-    <state x="496" y="300" key="Vcs.Push.Dialog.v2" timestamp="1600626281303">
+    <state x="496" y="300" key="Vcs.Push.Dialog.v2" timestamp="1600631076067">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="496" y="300" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1600626281303" />
+    <state x="496" y="300" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1600631076067" />
   </component>
 </project>
