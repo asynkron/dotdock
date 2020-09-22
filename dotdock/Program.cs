@@ -82,18 +82,22 @@ COPY --from=build-env /app/out .
 
             var test = ConsoleTools.AskYesNo("Run tests?");
 
-            var images = new[]
+            var buildImages = new[]
             {
                 "mcr.microsoft.com/dotnet/core/sdk:3.1",
-                "mcr.microsoft.com/dotnet/core/aspnet:3.1",
                 "mcr.microsoft.com/dotnet/sdk:5.0",
+            };
+            
+            var appImages = new[]
+            {
+                "mcr.microsoft.com/dotnet/core/aspnet:3.1",
                 "mcr.microsoft.com/dotnet/aspnet:5.0",
                 "mcr.microsoft.com/dotnet/core/runtime:3.1",
                 "mcr.microsoft.com/dotnet/runtime:5.0"
             };
 
-            var buildImage = ConsoleTools.SelectOne(images, s => s, "Select build image");
-            var appImage = ConsoleTools.SelectOne(images, s => s, "Select app image");
+            var buildImage = ConsoleTools.SelectOne(buildImages, s => s, "Select build image");
+            var appImage = ConsoleTools.SelectOne(appImages, s => s, "Select app image");
 
             var runRestore = $"RUN dotnet restore \"{projectFile.ToPath()}\"";
             var runPublish = $"RUN dotnet publish -c Release -o out \"{projectFile.ToPath()}\"";

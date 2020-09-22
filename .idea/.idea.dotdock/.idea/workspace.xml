@@ -22,12 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40b0fd12-e621-43b1-b6ca-797cf1c82337" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.dotdock/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dotdock/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.dotdock/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dotdock/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotdock/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/dotdock/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotdock/dotdock.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/dotdock/dotdock.csproj" afterDir="false" />
-    </list>
+    <list default="true" id="40b0fd12-e621-43b1-b6ca-797cf1c82337" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -132,7 +127,13 @@
       <option name="presentableId" value="LOCAL−00005" />
       <updated>1600637001496</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL−00006" summary="images">
+      <created>1600791390516</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1600791390516</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,7 +155,8 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="first" />
     <MESSAGE value="fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
+    <MESSAGE value="images" />
+    <option name="LAST_COMMIT_MESSAGE" value="images" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1750" height="409" key="GridCell.Tab.0.bottom" timestamp="1600616054337">
@@ -245,9 +247,9 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="100" y="100" width="1592" height="920" key="VCS.FileHistoryDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1600790200234" />
-    <state x="496" y="300" key="Vcs.Push.Dialog.v2" timestamp="1600637002935">
+    <state x="496" y="300" key="Vcs.Push.Dialog.v2" timestamp="1600791391971">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="496" y="300" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1600637002935" />
+    <state x="496" y="300" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1600791391971" />
   </component>
 </project>
