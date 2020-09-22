@@ -73,7 +73,7 @@ COPY --from=build-env /app/out .
                     .ProjectItems
                     .ToList();
 
-            var projectFile = ConsoleTools.SelectOne(projects, p => p.name, "Select project to run");
+            var projectFile = ConsoleTools.SelectOne(projects.Where(p => !p.ToPath().Contains("test",StringComparison.InvariantCultureIgnoreCase)), p => p.name, "Select project to run");
             var paths = projects.Select(p => p.ToPath());
             var copyProjects = DockerCopyItems(paths);
 

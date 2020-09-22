@@ -133,7 +133,13 @@
       <option name="presentableId" value="LOCAL−00006" />
       <updated>1600791390516</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL−00007" summary="images">
+      <created>1600791829898</created>
+      <option name="number" value="LOCAL−00007" />
+      <option name="presentableId" value="LOCAL−00007" />
+      <updated>1600791829898</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,9 +253,9 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="100" y="100" width="1592" height="920" key="VCS.FileHistoryDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1600790200234" />
-    <state x="496" y="300" key="Vcs.Push.Dialog.v2" timestamp="1600791391971">
+    <state x="496" y="300" key="Vcs.Push.Dialog.v2" timestamp="1600791831052">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="496" y="300" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1600791391971" />
+    <state x="496" y="300" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1600791831052" />
   </component>
 </project>
