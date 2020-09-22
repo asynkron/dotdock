@@ -23,7 +23,7 @@ Dotdock is a CLI wizard that will generate the dockerfile for you.
 ### Example usage:
 
 ```
-❯ cd protoactor-dotnet.            <-- the project you want to dockerize
+❯ cd protoactor-dotnet            <-- whatever project you want to dockerize
 ❯ dotdock
 
 Using /users/rogerjohansson/git/protoactor-dotnet/ProtoActor.sln
