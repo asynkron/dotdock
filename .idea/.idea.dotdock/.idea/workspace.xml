@@ -139,7 +139,13 @@
       <option name="presentableId" value="LOCAL−00007" />
       <updated>1600791829898</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL−00008" summary="filter out tests">
+      <created>1600792205609</created>
+      <option name="number" value="LOCAL−00008" />
+      <option name="presentableId" value="LOCAL−00008" />
+      <updated>1600792205609</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,7 +168,8 @@
     <MESSAGE value="first" />
     <MESSAGE value="fixes" />
     <MESSAGE value="images" />
-    <option name="LAST_COMMIT_MESSAGE" value="images" />
+    <MESSAGE value="filter out tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="filter out tests" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1750" height="409" key="GridCell.Tab.0.bottom" timestamp="1600616054337">
@@ -253,9 +260,9 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="100" y="100" width="1592" height="920" key="VCS.FileHistoryDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1600790200234" />
-    <state x="496" y="300" key="Vcs.Push.Dialog.v2" timestamp="1600791831052">
+    <state x="496" y="300" key="Vcs.Push.Dialog.v2" timestamp="1600792207344">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="496" y="300" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1600791831052" />
+    <state x="496" y="300" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1600792207344" />
   </component>
 </project>
