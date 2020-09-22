@@ -26,7 +26,7 @@ namespace dotdock
             //TODO: filter out projects that are not apps?
 
             var template = @"
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build-env
+FROM %BUILDIMAGE% AS build-env
 WORKDIR /app
 
 # Copy nugetconfigs 
@@ -44,7 +44,7 @@ COPY . ./
 %DOTNETPUBLISH%
 
 # Build runtime image
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1
+FROM %APPIMAGE%
 WORKDIR /app
 COPY --from=build-env /app/out .
 %ENTRYPOINT%
@@ -73,7 +73,7 @@ COPY --from=build-env /app/out .
                     .ProjectItems
                     .ToList();
 
-            var projectFile = ConsoleTools.SelectOne(projects, p => p.path, "Select project to run");
+            var projectFile = ConsoleTools.SelectOne(projects, p => p.name, "Select project to run");
             var paths = projects.Select(p => p.ToPath());
             var copyProjects = DockerCopyItems(paths);
 
@@ -82,18 +82,34 @@ COPY --from=build-env /app/out .
 
             var test = ConsoleTools.AskYesNo("Run tests?");
 
+            var images = new[]
+            {
+                "mcr.microsoft.com/dotnet/core/sdk:3.1",
+                "mcr.microsoft.com/dotnet/core/aspnet:3.1",
+                "mcr.microsoft.com/dotnet/sdk:5.0",
+                "mcr.microsoft.com/dotnet/aspnet:5.0",
+                "mcr.microsoft.com/dotnet/core/runtime:3.1",
+                "mcr.microsoft.com/dotnet/runtime:5.0"
+            };
+
+            var buildImage = ConsoleTools.SelectOne(images, s => s, "Select build image");
+            var appImage = ConsoleTools.SelectOne(images, s => s, "Select app image");
+
             var runRestore = $"RUN dotnet restore \"{projectFile.ToPath()}\"";
             var runPublish = $"RUN dotnet publish -c Release -o out \"{projectFile.ToPath()}\"";
             var entrypoint = $"ENTRYPOINT [\"dotnet\", \"{app}.dll\"]";
             var runTests = test ? "RUN dotnet test" : "#RUN dotnet test";
 
             template = template
-                .Replace("%COPYNUGET%", copyNugetConfigs)
-                .Replace("%COPYCSPROJ%", copyProjects)
-                .Replace("%DOTNETRESTORE%", runRestore)
-                .Replace("%DOTNETPUBLISH%", runPublish)
-                .Replace("%ENTRYPOINT%", entrypoint)
-                .Replace("%DOTNETTEST%", runTests);
+                    .Replace("%COPYNUGET%", copyNugetConfigs)
+                    .Replace("%COPYCSPROJ%", copyProjects)
+                    .Replace("%DOTNETRESTORE%", runRestore)
+                    .Replace("%DOTNETPUBLISH%", runPublish)
+                    .Replace("%ENTRYPOINT%", entrypoint)
+                    .Replace("%DOTNETTEST%", runTests)
+                    .Replace("%BUILDIMAGE%",buildImage)
+                    .Replace("%APPIMAGE%",appImage)
+                ;
 
             var dockerFilePath = Path.Combine(path, "dockerfile");
             File.WriteAllText(dockerFilePath, template);

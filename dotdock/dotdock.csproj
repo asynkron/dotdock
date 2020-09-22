@@ -6,7 +6,7 @@
         <PackAsTool>true</PackAsTool>
         <ToolCommandName>dotdock</ToolCommandName>
         <PackageOutputPath>./nupkg</PackageOutputPath>
-        <Version>1.0.3</Version>
+        <Version>1.0.4</Version>
         <Authors>Roger Johansson</Authors>
         <Company>Asynkron AB</Company>
     </PropertyGroup>

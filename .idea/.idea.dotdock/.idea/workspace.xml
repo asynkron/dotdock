@@ -23,9 +23,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40b0fd12-e621-43b1-b6ca-797cf1c82337" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dotdock/ConsoleTools.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotdock/Extensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotdock/Options.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.dotdock/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dotdock/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.dotdock/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dotdock/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dotdock/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/dotdock/Program.cs" afterDir="false" />
@@ -39,14 +36,19 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Users/rogerjohansson/git/dotdock/dotdock/ConsoleTools.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/BAD026C4-39CC-4340-AC37-3C55C7265C35/9/ConsolePal.Unix.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/BAD026C4-39CC-4340-AC37-3C55C7265C35/6/Console.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/dotdock/dotdock.csproj" />
-        <option value="$PROJECT_DIR$/dotdock/ConsoleTools.cs" />
-        <option value="$PROJECT_DIR$/dotdock/Program.cs" />
         <option value="$PROJECT_DIR$/dotdock/Extensions.cs" />
         <option value="$PROJECT_DIR$/dotdock/Options.cs" />
+        <option value="$PROJECT_DIR$/dotdock/ConsoleTools.cs" />
+        <option value="$PROJECT_DIR$/dotdock/dotdock.csproj" />
+        <option value="$PROJECT_DIR$/dotdock/Program.cs" />
       </list>
     </option>
   </component>
@@ -239,6 +241,10 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="496" y="299" key="Rider.ProjectTemplateDialog.Size/0.0.1792.1120@0.0.1792.1120" timestamp="1600660055709" />
+    <state x="100" y="100" width="1592" height="920" key="VCS.FileHistoryDialog" timestamp="1600790200234">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="100" y="100" width="1592" height="920" key="VCS.FileHistoryDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1600790200234" />
     <state x="496" y="300" key="Vcs.Push.Dialog.v2" timestamp="1600637002935">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
