@@ -23,7 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40b0fd12-e621-43b1-b6ca-797cf1c82337" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/dotdock/ConsoleTools.cs" beforeDir="false" afterPath="$PROJECT_DIR$/dotdock/ConsoleTools.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.dotdock/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dotdock/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +37,7 @@
     <setting file="mock:///Users/rogerjohansson/git/dotdock/dotdock/ConsoleTools.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/BAD026C4-39CC-4340-AC37-3C55C7265C35/9/ConsolePal.Unix.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/BAD026C4-39CC-4340-AC37-3C55C7265C35/6/Console.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/rogerjohansson/git/dotdock/dotdock/ConsoleTools.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -147,7 +148,13 @@
       <option name="presentableId" value="LOCAL−00008" />
       <updated>1600792205609</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL−00009" summary="filter out tests">
+      <created>1600794111308</created>
+      <option name="number" value="LOCAL−00009" />
+      <option name="presentableId" value="LOCAL−00009" />
+      <updated>1600794111308</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,9 +269,9 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="100" y="100" width="1592" height="920" key="VCS.FileHistoryDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1600790200234" />
-    <state x="496" y="300" key="Vcs.Push.Dialog.v2" timestamp="1600792207344">
+    <state x="496" y="300" key="Vcs.Push.Dialog.v2" timestamp="1600794114291">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="496" y="300" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1600792207344" />
+    <state x="496" y="300" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1600794114291" />
   </component>
 </project>

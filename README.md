@@ -1,5 +1,16 @@
-# dotdock
-Generate dockerfiles for .NET Solutions
+# Dotdock
+
+Are you frustrated with writing weird docker configuration files by hand?
+
+Do you forget the syntax until the next time you need to write a new one?
+
+You just want to write code and the other stuff should just work?
+
+Then this is the tool for you!
+
+I already had enough, so I wrote this thing for you!
+
+Dotdock is a CLI wizard that will generate the dockerfile for you.
 
 ### Install:
 
