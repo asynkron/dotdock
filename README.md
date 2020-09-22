@@ -46,7 +46,8 @@ Using /users/rogerjohansson/git/protoactor-dotnet/ProtoActor.sln
 29) Supervision
 
 Select project to run> 28
-Run tests? [Y/n]
+Run tests? [Y/n] Y
+
 1) mcr.microsoft.com/dotnet/core/sdk:3.1
 2) mcr.microsoft.com/dotnet/sdk:5.0
 
@@ -58,6 +59,7 @@ Select build image> 1
 4) mcr.microsoft.com/dotnet/runtime:5.0
 
 Select app image> 3
+
 Wrote docker file to 'dockerfile'
 ```
 
