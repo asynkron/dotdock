@@ -22,7 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40b0fd12-e621-43b1-b6ca-797cf1c82337" name="Default Changelist" comment="" />
+    <list default="true" id="40b0fd12-e621-43b1-b6ca-797cf1c82337" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/dotdock/ConsoleTools.cs" beforeDir="false" afterPath="$PROJECT_DIR$/dotdock/ConsoleTools.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,9 +43,9 @@
       <list>
         <option value="$PROJECT_DIR$/dotdock/Extensions.cs" />
         <option value="$PROJECT_DIR$/dotdock/Options.cs" />
-        <option value="$PROJECT_DIR$/dotdock/ConsoleTools.cs" />
         <option value="$PROJECT_DIR$/dotdock/dotdock.csproj" />
         <option value="$PROJECT_DIR$/dotdock/Program.cs" />
+        <option value="$PROJECT_DIR$/dotdock/ConsoleTools.cs" />
       </list>
     </option>
   </component>

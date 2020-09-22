@@ -8,7 +8,6 @@ namespace dotdock
     {
         public static T SelectOne<T>(IEnumerable<T> options, Func<T, string> stringer, string prompt = "Select option")
         {
-            Console.WriteLine();
             var arr = options.OrderBy(stringer).ToArray();
             if (arr.Length == 1)
             {
@@ -25,7 +24,12 @@ namespace dotdock
                 Console.Write(prompt + "> ");
                 var res = Console.ReadLine();
                 if (int.TryParse(res!.Trim(), out var index) && index >= 1 && index <= arr.Length)
-                    return arr[index - 1];
+                {
+                    var item = arr[index - 1];
+                    Console.WriteLine("Selected: " + stringer(item));
+                    Console.WriteLine();
+                    return item;
+                }
 
                 Console.WriteLine("Invalid input!");
             }
@@ -41,8 +45,14 @@ namespace dotdock
                 {
                     case ConsoleKey.Y:
                     case ConsoleKey.Enter:
+                        Console.WriteLine();
+                        Console.WriteLine("Yes");
+                        Console.WriteLine();
                         return true;
                     case ConsoleKey.N:
+                        Console.WriteLine();
+                        Console.WriteLine("No");
+                        Console.WriteLine();
                         return false;
                 }
             }
