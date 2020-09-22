@@ -1,5 +1,7 @@
 # Dotdock
 
+## dotnet multi project dockerfile generator
+
 Are you frustrated with writing weird docker configuration files by hand?
 
 Do you forget the syntax until the next time you need to write a new one?
